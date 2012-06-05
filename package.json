@@ -1,0 +1,26 @@
+{
+    "name": "shell-http-forever",
+    "version": "0.0.1",
+    "description": "Start and stop an HTTP server using forever",
+    "author": "David Worms <david@adaltas.com>",
+    "contributors": [{
+        "name": "David Worms",
+        "email": "david@adaltas.com"
+    }],
+    "engines": {
+        "node": ">= 0.6.0"
+    },
+    "dependencies": {
+        "coffee-script": "latest",
+        "each": "latest",
+        "forever": "latest",
+        "pad": "latest"
+    },
+    "devDependencies": {
+    },
+    "keywords": ["cli", "console", "http", "xterm"],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wdavidw/node-shell-http-forever.git"
+    }
+}
