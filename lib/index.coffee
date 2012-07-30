@@ -1,6 +1,6 @@
 
 fs = require 'path'
-fs = require 'path'
+path = require 'path'
 existsSync = fs.existsSync or path.existsSync
 
 ###
