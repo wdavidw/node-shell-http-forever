@@ -1,5 +1,7 @@
 
-path = require 'path'
+fs = require 'path'
+fs = require 'path'
+existsSync = fs.existsSync or path.existsSync
 
 ###
 
@@ -49,14 +51,14 @@ module.exports = (settings = {}) ->
             # Path is relative to workspace
             search = path.resolve settings.workspace, search
             # If it exists, determin the executable
-            if path.existsSync "#{search}"
+            if existsSync "#{search}"
                 if search.substr(-4) is '.coffee'
                 then return ['coffee', "#{search}"]
                 else return ['node', "#{search}"]
             # Otherwise, try to see if filename is without an extension
-            if path.existsSync "#{search}.js"
+            if existsSync "#{search}.js"
                 return ['node', "#{search}.js"]
-            else if path.existsSync "#{search}.coffee"
+            else if existsSync "#{search}.coffee"
                 return ['coffee', "#{search}.coffee"]
         throw new Error 'Failed to discover a "server.js" or "app.js" file'
     route = (req, res, next) ->
